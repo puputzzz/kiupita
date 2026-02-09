@@ -1,0 +1,6 @@
+{
+    "id": "protagonist",
+    "name": "MC",
+    "images": {"default": "protagonist_neutral"},
+    "color": [255, 255, 255]
+}

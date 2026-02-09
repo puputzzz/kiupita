@@ -1,0 +1,30 @@
+{
+    "scene_001": {
+        "speaker": "protagonist",
+        "text": "WOE BISA AOKWOKWOWKWO",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_002"
+    },
+    "scene_002": {
+        "speaker": "kiupita",
+        "text": "yuk kiss",
+        "bg_image": "bg1",
+        "sprite_emotion": "happy",
+        "next_scene": "scene_003"
+    },
+    "scene_003": {
+        "speaker": "protagonist",
+        "text": "mau beb",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_004"
+    },
+    "scene_004": {
+        "speaker": "kiupita",
+        "text": "huhu",
+        "bg_image": "bg1",
+        "sprite_emotion": "happy",
+        "next_scene": "chapter_2"
+    }
+}

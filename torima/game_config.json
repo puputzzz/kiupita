@@ -1,0 +1,22 @@
+{
+    "game_metadata": {
+        "title": "Live Laugh Love",
+        "author": "MC",
+        "version": "1.0.0"
+    },
+    "engine_settings": {
+        "start_chapter": 1,
+        "text_speed": 0.05,
+        "debug_mode": true
+    },
+    "file_structure": {
+        "story_dir": "data/story/",
+        "save_dir": "saves/",
+        "character_file": "data/characters"
+    },
+    "window": {
+    "width": 1280,
+    "height": 720,
+    "caption": "Sunset Academy"
+    }
+}
