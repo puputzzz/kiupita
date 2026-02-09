@@ -13,12 +13,14 @@
             {
                 "text": "Let's go to the park!",
                 "score_change": {"affection": 60},
-                "next_file": "chapter_final"
+                "next_file": "chapter_final",
+                "next_scene": "start"
             },
             {
                 "text": "I'd rather stay inside.",
                 "score_change": {"affection": 20},
-                "next_file": "chapter_final"
+                "next_file": "chapter_final",
+                "next_scene": "start"
             }
         ]
     },

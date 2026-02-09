@@ -1,5 +1,5 @@
 {
-    "final_score_check": {
+    "start": {
         "type": "score_check",
         "conditions": [
             {
