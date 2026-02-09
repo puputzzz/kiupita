@@ -1,0 +1,19 @@
+{
+    "final_score_check": {
+        "type": "score_check",
+        "conditions": [
+            {
+                "requirement": {"affection": 80},
+                "next_file": "true_love.json",
+                "next_scene": "start"
+            },
+            {
+                "requirement": {"affection": 0},
+                "next_file": "friendship.json",
+                "next_scene": "start"
+            }
+        ],
+        "default_file": "endings/neutral.json",
+        "default_scene": "start"
+    }
+}

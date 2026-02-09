@@ -1,0 +1,22 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "You're such a good friend!",
+        "bg_image": "bg_cafe",
+        "sprite_emotion": "happy",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "protagonist",
+        "text": "Friends forever!",
+        "bg_image": "bg_cafe",
+        "sprite_emotion": "smile",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "THE END - Best Friends",
+        "bg_image": "bg_credits",
+        "type": "ending",
+        "ending_name": "Friendship Ending"
+    }
+}

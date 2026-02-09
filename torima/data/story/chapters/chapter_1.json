@@ -1,0 +1,49 @@
+{
+    "chapter_1_start": {
+        "text": "Chapter 1",
+        "bg_image": "bg1",
+        "next_scene": "scene_001"
+    },
+    "scene_001": {
+        "speaker": "kiupita",
+        "text": "Hello!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "Let's go to the park!",
+                "score_change": {"affection": 60},
+                "next_scene": "scene_000"
+            },
+            {
+                "text": "I'd rather stay inside.",
+                "score_change": {"affection": 20},
+                "next_scene": "scene_000"
+            }
+        ]
+    },
+    
+    "scene_000": {
+        "type": "score_check",
+        "conditions": [
+            {
+                "requirement": {"affection": 50},
+                "next_file": "final_chapter.json"
+            },
+            {
+                "requirement": {"affection": 0},
+                "next_file": "friendship.json"
+            }
+        ],
+        "default_file": "endings/neutral.json",
+        "default_scene": "start"
+    },
+
+    "checkpoint_chapter_2": {
+        "type": "checkpoint",
+        "requirements": {"affection": 50},
+        "fail_file": "endings/bad_end_chapter2.json",
+        "fail_scene": "start",
+        "pass_scene": "chapters/chapter_2.json"
+    }
+}
