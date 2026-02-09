@@ -1,0 +1,68 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "Meet me at the park tonight.",
+        "bg_image": "bg_school",
+        "sprite_emotion": "mysterious",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "text": "That evening...",
+        "bg_image": "bg_sunset",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I'm so glad you came.",
+        "bg_image": "bg_park_night",
+        "sprite_emotion": "happy",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "speaker": "kiupita",
+        "text": "I love you. Will you marry me?",
+        "bg_image": "bg_park_night",
+        "sprite_emotion": "nervous",
+        "choices": [
+            {
+                "text": "Yes! Of course!",
+                "next_scene": "proposal_yes"
+            },
+            {
+                "text": "I need time...",
+                "next_scene": "proposal_hesitate"
+            }
+        ]
+    },
+    "proposal_yes": {
+        "speaker": "protagonist",
+        "text": "Yes! I'll marry you!",
+        "bg_image": "bg_park_night",
+        "sprite_emotion": "love",
+        "next_scene": "wedding"
+    },
+    "wedding": {
+        "text": "Six months later...",
+        "bg_image": "bg_wedding",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "THE END - Married",
+        "bg_image": "bg_credits",
+        "type": "ending",
+        "ending_name": "True Love - Married"
+    },
+    "proposal_hesitate": {
+        "speaker": "kiupita",
+        "text": "That's okay... I'll wait.",
+        "bg_image": "bg_park_night",
+        "sprite_emotion": "understanding",
+        "next_scene": "final_dating"
+    },
+    "final_dating": {
+        "text": "THE END - Still Dating",
+        "bg_image": "bg_credits",
+        "type": "ending",
+        "ending_name": "True Love - Dating"
+    }
+}

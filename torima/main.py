@@ -41,9 +41,9 @@ def load_story_file(filepath):
         print(f"Warning: {filepath} not found!")
         return None
 
-def load_chapter(chapter_num):
+def load_chapter(chapter_filename):
     """Load a specific chapter's story data"""
-    return load_story_file(f"data/story/chapters/chapter_{chapter_num}.json")
+    return load_story_file(f"data/story/chapters/{chapter_filename}.json")
 
 def load_ending(ending_filename):
     """Load an ending file"""
@@ -124,15 +124,13 @@ def navigate_to_scene(game_state, destination, config):
     
     # Load new file if specified
     if next_file:
-        if next_file.endswith(".json"):
+        if next_file.endswith(".end"):
             # Load from endings directory
             new_story = load_ending(next_file)
             game_state.is_in_ending = True
         else:
-            # Assume it's a chapter reference like "chapter_2"
-            chapter_num = int(next_file.split("_")[1]) if "_" in next_file else int(next_file)
-            new_story = load_chapter(chapter_num)
-            game_state.current_chapter = chapter_num
+            new_story = load_chapter(next_file)
+            game_state.current_chapter = next_file
             game_state.is_in_ending = False
         
         if new_story:
