@@ -1,0 +1,46 @@
+{
+    "start": {
+        "text": "End of Chapter 3",
+        "bg_image": "bg1",
+        "next_scene": "scene_01"
+    },
+    "scene_01": {
+        "speaker": "kiupita",
+        "text": "After the winter formal, I realized something...",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "We've been friends for a while now, but it feels like we're growing apart instead of closer.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I thought we had something special, but... maybe I was wrong.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "speaker": "kiupita",
+        "text": "I think it's time we accept that we're better off going our separate ways.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "text": "After graduation, you lose touch completely. What could have been will remain a mystery.",
+        "bg_image": "bg1",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "BAD ENDING - You made it far, but couldn't seal the deal. The relationship ended with regret and what-ifs.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Almost But Not Quite"
+    }
+}

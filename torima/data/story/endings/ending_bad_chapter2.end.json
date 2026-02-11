@@ -1,0 +1,46 @@
+{
+    "start": {
+        "text": "End of Chapter 2",
+        "bg_image": "bg1",
+        "next_scene": "scene_01"
+    },
+    "scene_01": {
+        "speaker": "kiupita",
+        "text": "I thought we were becoming closer, but...",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "It feels like every time I try to get closer, you push me away.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I can't keep doing this. My heart can't take it anymore.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "speaker": "kiupita",
+        "text": "I'm sorry, but I need to focus on myself. I hope you understand.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "text": "Kiupita starts avoiding you. The friendship you built begins to crumble.",
+        "bg_image": "bg1",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "BAD ENDING - You had a chance at something special, but failed to nurture it. The relationship withered away.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Missed Opportunity"
+    }
+}

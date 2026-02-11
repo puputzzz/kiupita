@@ -1,49 +1,179 @@
 {
-    "chapter_1_start": {
-        "text": "Chapter 1",
-        "bg_image": "bg1",
-        "next_scene": "scene_001"
+  "start": {
+    "text": "Chapter 1: First Meeting",
+    "bg_image": "bg1",
+    "next_scene": "scene_001"
+  },
+  "scene_001": {
+    "speaker": "kiupita",
+    "text": "Oh! You must be the new student! I'm so happy to meet you!",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "scene_002"
+  },
+  "scene_002": {
+    "speaker": "kiupita",
+    "text": "Want to join me for lunch? I know a great spot in the cafeteria!",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "choices": [
+      {
+        "text": "I'd love to! Lead the way!",
+        "score_change": {
+          "affection": 15
+        },
+        "next_scene": "scene_003_accept"
+      },
+      {
+        "text": "Maybe another time.",
+        "score_change": {
+          "affection": 5
+        },
+        "next_scene": "scene_003_neutral"
+      },
+      {
+        "text": "No thanks, I prefer eating alone.",
+        "score_change": {
+          "affection": -5
+        },
+        "next_scene": "scene_003_decline"
+      }
+    ]
+  },
+  "scene_003_accept": {
+    "speaker": "kiupita",
+    "text": "Yay! I'm so glad! You're going to love it here!",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "scene_004"
+  },
+  "scene_003_neutral": {
+    "speaker": "kiupita",
+    "text": "Oh, that's okay! I understand being nervous on your first day.",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "scene_004"
+  },
+  "scene_003_decline": {
+    "speaker": "kiupita",
+    "text": "Oh... I see. Well, if you change your mind, I'll be around.",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "scene_004"
+  },
+  "scene_004": {
+    "text": "Later that day...",
+    "bg_image": "bg1",
+    "next_scene": "scene_005"
+  },
+  "scene_005": {
+    "speaker": "kiupita",
+    "text": "Hey! There's a festival this weekend. Would you like to come with me?",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "choices": [
+      {
+        "text": "Absolutely! I'd love to go!",
+        "score_change": {
+          "affection": 20
+        },
+        "next_scene": "scene_006"
+      },
+      {
+        "text": "Sure, sounds fun.",
+        "score_change": {
+          "affection": 10
+        },
+        "next_scene": "scene_006"
+      },
+      {
+        "text": "Festivals aren't really my thing.",
+        "score_change": {
+          "affection": -10
+        },
+        "next_scene": "midchapter_check"
+      }
+    ]
+  },
+  "midchapter_check": {
+    "type": "score_check",
+    "conditions": [
+      {
+        "requirement": {
+          "affection": 0
+        },
+        "next_scene": "scene_006"
+      }
+    ],
+    "default_file": "ending_bad_midstory.end.json",
+    "default_scene": "start"
+  },
+  "scene_006": {
+    "text": "The weekend arrives...",
+    "bg_image": "bg1",
+    "next_scene": "scene_007"
+  },
+  "scene_007": {
+    "speaker": "kiupita",
+    "text": "I'm having such a great time with you! You know, I was worried about making friends this year.",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "scene_008"
+  },
+  "scene_008": {
+    "speaker": "kiupita",
+    "text": "Would you like to study together sometime? I could really use a study partner.",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "choices": [
+      {
+        "text": "That sounds perfect!",
+        "score_change": {
+          "affection": 15
+        },
+        "next_scene": "scene_009"
+      },
+      {
+        "text": "I'll check my schedule.",
+        "score_change": {
+          "affection": 5
+        },
+        "next_scene": "scene_009"
+      },
+      {
+        "text": "I study better alone.",
+        "score_change": {
+          "affection": -5
+        },
+        "next_scene": "scene_009"
+      }
+    ]
+  },
+  "scene_009": {
+    "text": "A few days later...",
+    "bg_image": "bg1",
+    "next_scene": "scene_010"
+  },
+  "scene_010": {
+    "speaker": "kiupita",
+    "text": "Thanks for everything this week. You've made my days so much brighter!",
+    "bg_image": "bg1",
+    "sprite_emotion": "default",
+    "next_scene": "end_chapter_1"
+  },
+  "end_chapter_1": {
+    "text": "End of Chapter 1",
+    "bg_image": "bg1",
+    "next_scene": "checkpoint_to_ch2"
+  },
+  "checkpoint_to_ch2": {
+    "type": "checkpoint",
+    "requirements": {
+      "affection": 25
     },
-    "scene_001": {
-        "speaker": "kiupita",
-        "text": "Hello!",
-        "bg_image": "bg1",
-        "sprite_emotion": "default",
-        "choices": [
-            {
-                "text": "Let's go to the park!",
-                "score_change": {"affection": 60},
-                "next_scene": "scene_000"
-            },
-            {
-                "text": "I'd rather stay inside.",
-                "score_change": {"affection": 20},
-                "next_scene": "scene_000"
-            }
-        ]
-    },
-    
-    "scene_000": {
-        "type": "score_check",
-        "conditions": [
-            {
-                "requirement": {"affection": 50},
-                "next_file": "final_chapter.json"
-            },
-            {
-                "requirement": {"affection": 0},
-                "next_file": "friendship.json"
-            }
-        ],
-        "default_file": "endings/neutral.json",
-        "default_scene": "start"
-    },
-
-    "checkpoint_chapter_2": {
-        "type": "checkpoint",
-        "requirements": {"affection": 50},
-        "fail_file": "endings/bad_end_chapter2.json",
-        "fail_scene": "start",
-        "pass_scene": "chapters/chapter_2.json"
-    }
+    "pass_file": "chapter_2",
+    "pass_scene": "start",
+    "fail_file": "ending_bad_chapter1.end.json",
+    "fail_scene": "start"
+  }
 }

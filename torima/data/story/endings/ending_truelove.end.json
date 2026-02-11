@@ -1,0 +1,87 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "You came! I wasn't sure if you would.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "This whole year... every moment with you has been precious to me.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I've fallen completely in love with you. I can't imagine my life without you in it.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "speaker": "kiupita",
+        "text": "Will you... be mine? Will you be my partner, in everything?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "Yes! I love you too!",
+                "next_scene": "proposal_yes"
+            },
+            {
+                "text": "I need some time to think...",
+                "next_scene": "proposal_hesitate"
+            }
+        ]
+    },
+    "proposal_yes": {
+        "speaker": "kiupita",
+        "text": "You have no idea how happy you've made me! This is the best day of my life!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "together"
+    },
+    "together": {
+        "text": "You embrace under the starlight...",
+        "bg_image": "bg1",
+        "next_scene": "timeskip"
+    },
+    "timeskip": {
+        "text": "One year later...",
+        "bg_image": "bg1",
+        "next_scene": "future"
+    },
+    "future": {
+        "speaker": "kiupita",
+        "text": "Every day with you is an adventure. I'm so grateful we found each other.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "TRUE LOVE ENDING - You found your soulmate and live happily together.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "True Love"
+    },
+    "proposal_hesitate": {
+        "speaker": "kiupita",
+        "text": "That's okay... I understand. Take all the time you need. I'll be here.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "dating"
+    },
+    "dating": {
+        "text": "You continue dating, taking things at your own pace...",
+        "bg_image": "bg1",
+        "next_scene": "final_dating"
+    },
+    "final_dating": {
+        "text": "TRUE LOVE ENDING - You're in a loving relationship, taking it one day at a time.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "True Love - Dating"
+    }
+}

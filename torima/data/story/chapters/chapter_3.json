@@ -1,0 +1,156 @@
+{
+    "start": {
+        "text": "Chapter 3: Deeper Connections",
+        "bg_image": "bg1",
+        "next_scene": "scene_001"
+    },
+    
+    "scene_001": {
+        "speaker": "kiupita",
+        "text": "Can you believe we're already halfway through the school year?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_002"
+    },
+    
+    "scene_002": {
+        "speaker": "kiupita",
+        "text": "I need to tell you something... I've been thinking about this for a while now.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_003"
+    },
+    
+    "scene_003": {
+        "speaker": "kiupita",
+        "text": "You've become the most important person in my life. I don't know what I'd do without you.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "You're the most important person to me too!",
+                "score_change": {"affection": 20},
+                "next_scene": "scene_004"
+            },
+            {
+                "text": "I really care about you.",
+                "score_change": {"affection": 12},
+                "next_scene": "scene_004"
+            },
+            {
+                "text": "That's... a lot of pressure.",
+                "score_change": {"affection": -10},
+                "next_scene": "scene_004"
+            }
+        ]
+    },
+    
+    "scene_004": {
+        "text": "A school event is announced...",
+        "bg_image": "bg1",
+        "next_scene": "scene_005"
+    },
+    
+    "scene_005": {
+        "speaker": "kiupita",
+        "text": "The winter formal is coming up... Would you... want to go with me?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "I'd be honored! Yes!",
+                "score_change": {"affection": 22},
+                "next_scene": "scene_006"
+            },
+            {
+                "text": "Sure, could be fun.",
+                "score_change": {"affection": 10},
+                "next_scene": "scene_006"
+            },
+            {
+                "text": "I don't really do dances.",
+                "score_change": {"affection": -15},
+                "next_scene": "midchapter_check"
+            }
+        ]
+    },
+    
+    "midchapter_check": {
+        "type": "score_check",
+        "conditions": [
+            {
+                "requirement": {"affection": 60},
+                "next_scene": "scene_006"
+            }
+        ],
+        "default_file": "ending_bad_midstory.end.json",
+        "default_scene": "start"
+    },
+    
+    "scene_006": {
+        "text": "At the winter formal...",
+        "bg_image": "bg1",
+        "next_scene": "scene_007"
+    },
+    
+    "scene_007": {
+        "speaker": "kiupita",
+        "text": "This night is perfect. You look amazing, by the way.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_008"
+    },
+    
+    "scene_008": {
+        "speaker": "kiupita",
+        "text": "Can I be honest with you? My feelings for you have grown into something... more than friendship.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "I feel the same way! I think I'm falling for you.",
+                "score_change": {"affection": 18},
+                "next_scene": "scene_009"
+            },
+            {
+                "text": "I care about you deeply.",
+                "score_change": {"affection": 10},
+                "next_scene": "scene_009"
+            },
+            {
+                "text": "I value our friendship.",
+                "score_change": {"affection": -5},
+                "next_scene": "scene_009"
+            }
+        ]
+    },
+    
+    "scene_009": {
+        "text": "The music plays softly...",
+        "bg_image": "bg1",
+        "next_scene": "scene_010"
+    },
+    
+    "scene_010": {
+        "speaker": "kiupita",
+        "text": "Whatever happens next, I want you to know that meeting you changed my life.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "end_chapter_3"
+    },
+    
+    "end_chapter_3": {
+        "text": "End of Chapter 3",
+        "bg_image": "bg1",
+        "next_scene": "checkpoint_final"
+    },
+    
+    "checkpoint_final": {
+        "type": "checkpoint",
+        "requirements": {"affection": 75},
+        "pass_file": "chapter_final",
+        "pass_scene": "start",
+        "fail_file": "ending_bad_chapter3.end.json",
+        "fail_scene": "start"
+    }
+}

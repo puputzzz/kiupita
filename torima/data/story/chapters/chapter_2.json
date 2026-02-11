@@ -1,0 +1,172 @@
+{
+    "start": {
+        "text": "Chapter 2: Growing Closer",
+        "bg_image": "bg1",
+        "next_scene": "scene_001"
+    },
+    
+    "scene_001": {
+        "speaker": "kiupita",
+        "text": "I can't believe we've been friends for a month already! Time flies!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_002"
+    },
+    
+    "scene_002": {
+        "speaker": "kiupita",
+        "text": "Hey, I need to tell you something important... I really value our friendship.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "I value it too! You mean a lot to me.",
+                "score_change": {"affection": 15},
+                "next_scene": "scene_003"
+            },
+            {
+                "text": "Yeah, we've had some good times.",
+                "score_change": {"affection": 8},
+                "next_scene": "scene_003"
+            },
+            {
+                "text": "We're just classmates, aren't we?",
+                "score_change": {"affection": -10},
+                "next_scene": "scene_003"
+            }
+        ]
+    },
+    
+    "scene_003": {
+        "text": "The school announces a group project...",
+        "bg_image": "bg1",
+        "next_scene": "scene_004"
+    },
+    
+    "scene_004": {
+        "speaker": "kiupita",
+        "text": "Want to be partners for the project? I think we'd work really well together!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "Definitely! Let's do this!",
+                "score_change": {"affection": 20},
+                "next_scene": "scene_005"
+            },
+            {
+                "text": "Sure, why not.",
+                "score_change": {"affection": 10},
+                "next_scene": "scene_005"
+            },
+            {
+                "text": "I was thinking of working with someone else...",
+                "score_change": {"affection": -15},
+                "next_scene": "midchapter_check"
+            }
+        ]
+    },
+    
+    "midchapter_check": {
+        "type": "score_check",
+        "conditions": [
+            {
+                "requirement": {"affection": 30},
+                "next_scene": "scene_005"
+            }
+        ],
+        "default_file": "ending_bad_midstory.end.json",
+        "default_scene": "start"
+    },
+    
+    "scene_005": {
+        "text": "Working on the project together...",
+        "bg_image": "bg1",
+        "next_scene": "scene_006"
+    },
+    
+    "scene_006": {
+        "speaker": "kiupita",
+        "text": "You know, I feel like I can be myself around you. That's really rare for me.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_007"
+    },
+    
+    "scene_007": {
+        "speaker": "kiupita",
+        "text": "There's a movie I've been wanting to see. Would you... want to go see it with me?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "I'd love to! What time?",
+                "score_change": {"affection": 18},
+                "next_scene": "scene_008"
+            },
+            {
+                "text": "Maybe if I'm free.",
+                "score_change": {"affection": 7},
+                "next_scene": "scene_008"
+            },
+            {
+                "text": "I'm not really into movies.",
+                "score_change": {"affection": -8},
+                "next_scene": "scene_008"
+            }
+        ]
+    },
+    
+    "scene_008": {
+        "text": "At the movie theater...",
+        "bg_image": "bg1",
+        "next_scene": "scene_009"
+    },
+    
+    "scene_009": {
+        "speaker": "kiupita",
+        "text": "That was amazing! Thanks for coming with me. This has been the best day!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_010"
+    },
+    
+    "scene_010": {
+        "speaker": "kiupita",
+        "text": "I'm starting to feel like... we have something special. Don't you think?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "choices": [
+            {
+                "text": "I feel the same way!",
+                "score_change": {"affection": 15},
+                "next_scene": "chapter_2_end"
+            },
+            {
+                "text": "We're definitely good friends.",
+                "score_change": {"affection": 8},
+                "next_scene": "end_chapter_2"
+            },
+            {
+                "text": "I don't know what you mean.",
+                "score_change": {"affection": -5},
+                "next_scene": "end_chapter_2"
+            }
+        ]
+    },
+    
+    "end_chapter_2": {
+        "text": "End of Chapter 2",
+        "bg_image": "bg1",
+        "next_scene": "checkpoint_chapter_3"
+    },
+    
+    "checkpoint_chapter_3": {
+        "type": "checkpoint",
+        "requirements": {"affection": 55},
+        "pass_file": "chapter_3",
+        "pass_scene": "start",
+        "fail_file": "ending_bad_chapter2.end.json",
+        "fail_scene": "start"
+    }
+}

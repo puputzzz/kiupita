@@ -46,8 +46,15 @@ def load_chapter(chapter_filename):
     return load_story_file(f"data/story/chapters/{chapter_filename}.json")
 
 def load_ending(ending_filename):
-    """Load an ending file"""
-    return load_story_file(f"data/story/endings/{ending_filename}")
+    """Load an ending file - expects .end.json extension"""
+    # Use filename as-is (should include .end.json)
+    filepath = f"data/story/endings/{ending_filename}"
+    if os.path.exists(filepath):
+        with open(filepath, "r") as f:
+            return json.load(f)
+    
+    print(f"Warning: Ending file {ending_filename} not found!")
+    return None
 
 class GameState:
     """Manages game state including scores, current story, and scene"""
@@ -85,7 +92,7 @@ def evaluate_score_check(game_state, scene):
     """Evaluate score check and return next destination"""
     conditions = scene.get("conditions", [])
     
-    # Check conditions in order (highest requirements first)
+    # Check conditions in order (should be highest requirements first in JSON)
     for condition in conditions:
         requirement = condition.get("requirement", {})
         if game_state.check_requirements(requirement):
@@ -124,35 +131,51 @@ def navigate_to_scene(game_state, destination, config):
     
     # Load new file if specified
     if next_file:
-        if next_file.endswith(".end"):
+        if ".end" in next_file:  # Check if it's an ending file (.end or .end.json)
             # Load from endings directory
             new_story = load_ending(next_file)
             game_state.is_in_ending = True
+            if config["engine_settings"]["debug_mode"]:
+                print(f"Loading ending: {next_file}")
         else:
+            # Load chapter
             new_story = load_chapter(next_file)
             game_state.current_chapter = next_file
             game_state.is_in_ending = False
+            if config["engine_settings"]["debug_mode"]:
+                print(f"Loading chapter: {next_file}")
         
+        # FIXED: Actually load the new story!
         if new_story:
-            game_state.load_story(new_story, next_scene)
+            game_state.load_story(new_story, next_scene if next_scene else "start")
+            if config["engine_settings"]["debug_mode"]:
+                print(f"Successfully loaded story, starting at scene: {next_scene if next_scene else 'start'}")
         else:
-            print(f"Failed to load: {next_file}")
+            print(f"ERROR: Failed to load file: {next_file}")
+            return False
     
     # Just change scene within current file
     elif next_scene:
         # Check if it's a chapter transition (e.g., "chapter_2")
         if next_scene.startswith("chapter_"):
-            chapter_num = int(next_scene.split("_")[1])
-            story = load_chapter(chapter_num)
+            chapter_name = next_scene
+            story = load_chapter(chapter_name)
             if story:
-                game_state.current_chapter = chapter_num
-                game_state.load_story(story, list(story.keys())[0])
+                game_state.current_chapter = chapter_name
+                game_state.load_story(story, "start")
                 game_state.is_in_ending = False
+                if config["engine_settings"]["debug_mode"]:
+                    print(f"Loading chapter: {chapter_name}")
             else:
-                print(f"Chapter {chapter_num} not found!")
+                print(f"Chapter {chapter_name} not found!")
+                return False
         else:
             # Regular scene change within same file
             game_state.current_scene_id = next_scene
+            if config["engine_settings"]["debug_mode"]:
+                print(f"Moving to scene: {next_scene}")
+    
+    return True
 
 def main():
     # --- INITIALIZATION ---

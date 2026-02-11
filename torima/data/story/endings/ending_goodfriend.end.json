@@ -1,0 +1,65 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "Thanks for meeting me here. I wanted to talk to you about something.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "This year has been amazing because of you. You've become one of my closest friends.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I had some deeper feelings developing, but I think I understand where we stand.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "speaker": "kiupita",
+        "text": "And that's okay! Having you as a close friend means the world to me.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "text": "You talk under the stars for hours...",
+        "bg_image": "bg1",
+        "next_scene": "scene_06"
+    },
+    "scene_06": {
+        "speaker": "kiupita",
+        "text": "Promise me we'll stay friends, even after graduation?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_07"
+    },
+    "scene_07": {
+        "text": "You promise, knowing this friendship will last forever.",
+        "bg_image": "bg1",
+        "next_scene": "timeskip"
+    },
+    "timeskip": {
+        "text": "Years later...",
+        "bg_image": "bg1",
+        "next_scene": "future"
+    },
+    "future": {
+        "speaker": "kiupita",
+        "text": "I'm so glad we stayed in touch. You're still one of my best friends!",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "CLOSE FRIENDS ENDING - You formed a lifelong friendship that will endure anything.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Best Friends Forever"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "start": {
+        "text": "End of Chapter 1",
+        "bg_image": "bg1",
+        "next_scene": "scene_01"
+    },
+    "scene_01": {
+        "speaker": "kiupita",
+        "text": "Hey, can we talk for a moment?",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "I tried to be friendly and get to know you, but... it feels like you're not interested.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I think it's best if we just stay classmates. Nothing more.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "text": "You go your separate ways. The opportunity for friendship has passed.",
+        "bg_image": "bg1",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "text": "The rest of the year, you barely acknowledge each other in the halls.",
+        "bg_image": "bg1",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "BAD ENDING - You failed to build a meaningful connection. The relationship never had a chance to grow.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Strangers"
+    }
+}

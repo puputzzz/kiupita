@@ -1,19 +1,50 @@
 {
     "start": {
+        "text": "Final Chapter: The Moment of Truth",
+        "bg_image": "bg1",
+        "next_scene": "scene_001"
+    },
+    
+    "scene_001": {
+        "speaker": "kiupita",
+        "text": "The school year is almost over... I can't believe how fast time has flown.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_002"
+    },
+    
+    "scene_002": {
+        "speaker": "kiupita",
+        "text": "Meet me at the park tonight. There's something important I need to tell you.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_003"
+    },
+    
+    "scene_003": {
+        "text": "That evening at the park...",
+        "bg_image": "bg1",
+        "next_scene": "final_evaluation"
+    },
+    
+    "final_evaluation": {
         "type": "score_check",
         "conditions": [
             {
-                "requirement": {"affection": 80},
-                "next_file": "ending_truelove.end",
+                "requirement": {"affection": 90},
+                "next_file": "ending_truelove.end.json",
+                "next_scene": "start"
+            },
+            {
+                "requirement": {"affection": 60},
+                "next_file": "ending_goodfriend.end.json",
                 "next_scene": "start"
             },
             {
                 "requirement": {"affection": 0},
-                "next_file": "ending_friendship.end",
+                "next_file": "ending_friendship.end.json",
                 "next_scene": "start"
             }
-        ],
-        "default_file": "endings/neutral.end",
-        "default_scene": "start"
+        ]
     }
 }

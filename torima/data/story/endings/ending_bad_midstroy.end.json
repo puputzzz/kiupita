@@ -1,0 +1,39 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "I... I don't think this is working out.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "I've been trying to connect with you, but it feels like you don't really care.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I think it's best if we just... keep our distance from now on.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "text": "Kiupita walks away, and you realize you've lost something precious.",
+        "bg_image": "bg1",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "text": "The rest of the year passes in uncomfortable silence whenever you see each other.",
+        "bg_image": "bg1",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "BAD ENDING - Your relationship deteriorated beyond repair. Sometimes, you can't take back hurtful actions.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Broken Connection"
+    }
+}

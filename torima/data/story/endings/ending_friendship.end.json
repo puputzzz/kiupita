@@ -1,0 +1,51 @@
+{
+    "start": {
+        "speaker": "kiupita",
+        "text": "Hey, thanks for coming. I wanted to catch up before summer break.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_02"
+    },
+    "scene_02": {
+        "speaker": "kiupita",
+        "text": "This year was interesting. We had some good times together.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_03"
+    },
+    "scene_03": {
+        "speaker": "kiupita",
+        "text": "I hope we can stay in touch, even if we don't see each other much.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "scene_04"
+    },
+    "scene_04": {
+        "text": "You exchange contact information and talk about summer plans.",
+        "bg_image": "bg1",
+        "next_scene": "scene_05"
+    },
+    "scene_05": {
+        "speaker": "kiupita",
+        "text": "Take care! Maybe I'll see you around sometime.",
+        "bg_image": "bg1",
+        "sprite_emotion": "default",
+        "next_scene": "timeskip"
+    },
+    "timeskip": {
+        "text": "Years pass...",
+        "bg_image": "bg1",
+        "next_scene": "future"
+    },
+    "future": {
+        "text": "You occasionally run into each other and catch up. You're friendly acquaintances who share pleasant memories of your school days together.",
+        "bg_image": "bg1",
+        "next_scene": "final"
+    },
+    "final": {
+        "text": "FRIENDSHIP ENDING - You remained casual friends with pleasant memories.",
+        "bg_image": "bg1",
+        "type": "ending",
+        "ending_name": "Just Friends"
+    }
+}
