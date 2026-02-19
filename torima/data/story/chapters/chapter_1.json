@@ -1,100 +1,161 @@
 {
   "start": {
-    "text": "Chapter 1: First Meeting",
+    "speaker": "???",
+    "text": "\"Age 19.. Case Report S.. cause of death.. strangulation...\" A person in front of me mumbles as they write something on a sheet of paper.",
     "bg_image": "bg1",
+    "zoom": 2.0,
     "next_scene": "scene_001"
   },
   "scene_001": {
-    "speaker": "kiupita",
-    "text": "Oh! You must be the new student! I'm so happy to meet you!",
+    "speaker": "protagonist",
+    "text": "\"H - huh..?\" I stuttered, but the person doesn't seem to notice.",
     "bg_image": "bg1",
-    "sprite_emotion": "default",
     "next_scene": "scene_002"
   },
   "scene_002": {
-    "speaker": "kiupita",
-    "text": "Want to join me for lunch? I know a great spot in the cafeteria!",
+    "text": "I look at my surroundings but it feels strange. I can see clearly but at the same time I see nothing. | It seems cold, | but I don't necessarily feel it. | I can't understand nor describe what I'm feeling, | I feel like I'm breathing but I don't feel my chest moving.",
     "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "choices": [
-      {
-        "text": "I'd love to! Lead the way!",
-        "score_change": {
-          "affection": 15
-        },
-        "next_scene": "scene_003_accept"
-      },
-      {
-        "text": "Maybe another time.",
-        "score_change": {
-          "affection": 5
-        },
-        "next_scene": "scene_003_neutral"
-      },
-      {
-        "text": "No thanks, I prefer eating alone.",
-        "score_change": {
-          "affection": -5
-        },
-        "next_scene": "scene_003_decline"
-      }
-    ]
+    "next_scene": "scene_003"
   },
-  "scene_003_accept": {
-    "speaker": "kiupita",
-    "text": "Yay! I'm so glad! You're going to love it here!",
+    "scene_003": {
+    "text": "I don't feel my chest, | or rather my heart, | beating at all.",
     "bg_image": "bg1",
-    "sprite_emotion": "default",
     "next_scene": "scene_004"
   },
-  "scene_003_neutral": {
-    "speaker": "kiupita",
-    "text": "Oh, that's okay! I understand being nervous on your first day.",
-    "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "next_scene": "scene_004"
-  },
-  "scene_003_decline": {
-    "speaker": "kiupita",
-    "text": "Oh... I see. Well, if you change your mind, I'll be around.",
-    "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "next_scene": "scene_004"
-  },
-  "scene_004": {
-    "text": "Later that day...",
+  
+    "scene_004": {
+    "text": "..wait.. ",
     "bg_image": "bg1",
     "next_scene": "scene_005"
   },
+
   "scene_005": {
-    "speaker": "kiupita",
-    "text": "Hey! There's a festival this weekend. Would you like to come with me?",
+    "speaker": "protagonist",
+    "text": "\"Fuck, so it worked,\" | I chuckled beneath my breath and that's when I see it, | a red glow facing me. | It took me a while to realize that it's an eye which belonged to the person I saw.",
     "bg_image": "bg1",
-    "sprite_emotion": "default",
+    "next_scene": "scene_006"
+  },
+  
+  "scene_006": {
+  "text": "Their two colored eyes look straight at me but somehow I can see it move, | the pupils dilate from time to time and the cornea shakes constantly. | It doesn't look human.",
+  "bg_image": "bg1",
+  "next_scene": "scene_007"
+  },
+  "scene_007": {
+    "bg_image": "bg1",
     "choices": [
       {
-        "text": "Absolutely! I'd love to go!",
+        "text": "\"..are you okay..?\"",
         "score_change": {
-          "affection": 20
+          "affection": 5
         },
-        "next_scene": "scene_006"
+        "next_scene": "scene_007_high"
       },
       {
-        "text": "Sure, sounds fun.",
+        "text": "\"..where am I?\"",
         "score_change": {
-          "affection": 10
+          "affection": 0
         },
-        "next_scene": "scene_006"
-      },
-      {
-        "text": "Festivals aren't really my thing.",
-        "score_change": {
-          "affection": -10
-        },
-        "next_scene": "midchapter_check"
+        "next_scene": "scene_007_low"
       }
     ]
   },
+
+  "scene_007_high": {
+  "speaker": "kiupita",
+  "text": "The person tilted their head. | \"Ask that to yourself, you just died.\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_008"
+  },
+
+  "scene_007_low": {
+  "speaker": "kiupita",
+  "text": "\"Oh, you're dead. | I'm collecting your soul.\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_008"
+  },
+
+  "scene_008": {
+    "speaker": "protagonist",
+    "text": "\"Oh.\" | I don't know how to react. | By now it's quite obvious to me that I'm dead, so that information didn't really help me.",
+    "bg_image": "bg1",
+    "next_scene": "scene_009"
+  },
+
+  "scene_009": {
+    "bg_image": "bg1",
+    "choices": [
+      {
+        "text": "\"Who are you?\"",
+        "score_change": {
+          "affection": 5
+        },
+        "next_scene": "scene_010_high"
+      },
+      {
+        "text": "\"So.. what place is this?\"",
+        "score_change": {
+          "affection": 0
+        },
+        "next_scene": "scene_010_low"
+      }
+    ]
+  },
+
+  "scene_010_high": {
+  "speaker": "kiupita",
+  "text": "\"Hm, Curious about me? | Like I told you, I'm your soul collector. | We will be working together in the same division for now on, so let's be in good terms for now on, | for your own good\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_011"
+  },
+
+  "scene_010_low": {
+  "speaker": "kiupita",
+  "text": "\"Oh, | I thought it was obvious, | sorry. | It's a place between life and death of course. | Because of your cause of death, my division is the one to pick you up.\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_011"
+  },
+
+  "scene_011": {
+    "bg_image": "bg1",
+    "choices": [
+      {
+        "text": "\"You wanna kiss?\"",
+        "score_change": {
+          "affection": 10
+        },
+        "next_scene": "scene_012_high"
+      },
+      {
+        "text": "\"So.. what place is this?\"",
+        "score_change": {
+          "affection": 0
+        },
+        "next_scene": "scene_010_low"
+      }
+    ]
+  },
+
+  "scene_012_high": {
+  "speaker": "kiupita",
+  "text": "\"Hah! | Getting so familiar already? | Say.. | have you ever experienced love?\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_012_next"
+  },
+
+  "scene_012_next": {
+  "speaker": "kiupita",
+  "text": "\"I find love fascinating. | Someone in the past told me all about it you know\"",
+  "bg_image": "bg1",
+  "sprite_emotion": "default",
+  "next_scene": "scene_013"
+  },
+
   "midchapter_check": {
     "type": "score_check",
     "conditions": [
@@ -108,59 +169,7 @@
     "default_file": "ending_bad_midstory.end.json",
     "default_scene": "start"
   },
-  "scene_006": {
-    "text": "The weekend arrives...",
-    "bg_image": "bg1",
-    "next_scene": "scene_007"
-  },
-  "scene_007": {
-    "speaker": "kiupita",
-    "text": "I'm having such a great time with you! You know, I was worried about making friends this year.",
-    "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "next_scene": "scene_008"
-  },
-  "scene_008": {
-    "speaker": "kiupita",
-    "text": "Would you like to study together sometime? I could really use a study partner.",
-    "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "choices": [
-      {
-        "text": "That sounds perfect!",
-        "score_change": {
-          "affection": 15
-        },
-        "next_scene": "scene_009"
-      },
-      {
-        "text": "I'll check my schedule.",
-        "score_change": {
-          "affection": 5
-        },
-        "next_scene": "scene_009"
-      },
-      {
-        "text": "I study better alone.",
-        "score_change": {
-          "affection": -5
-        },
-        "next_scene": "scene_009"
-      }
-    ]
-  },
-  "scene_009": {
-    "text": "A few days later...",
-    "bg_image": "bg1",
-    "next_scene": "scene_010"
-  },
-  "scene_010": {
-    "speaker": "kiupita",
-    "text": "Thanks for everything this week. You've made my days so much brighter!",
-    "bg_image": "bg1",
-    "sprite_emotion": "default",
-    "next_scene": "end_chapter_1"
-  },
+
   "end_chapter_1": {
     "text": "End of Chapter 1",
     "bg_image": "bg1",

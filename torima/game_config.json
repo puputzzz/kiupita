@@ -6,21 +6,14 @@
     },
     "engine_settings": {
         "start_chapter": "chapter_1",
-        "text_speed": 0.05,
+        "text_speed": 0.02,
         "debug_mode": true,
+        "default_sprite_zoom": 1.0,
         "initial_scores": {
             "affection": 0
         }
     },
-    "score_thresholds": {
-        "mid_chapter_survival": 0,
-        "chapter_1_checkpoint": 25,
-        "chapter_2_checkpoint": 50,
-        "chapter_3_checkpoint": 70,
-        "ending_friendship": 0,
-        "ending_goodfriend": 50,
-        "ending_truelove": 80
-    },
+
     "file_structure": {
         "story_dir": "data/story/chapters/",
         "endings_dir": "data/story/endings/",
